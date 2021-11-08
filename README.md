@@ -1,6 +1,6 @@
 # stock-analysis
 
-# An Analysis of Stocks
+## An Analysis of Stocks
 Explore green energy stock performance by analyzing financial data using VBA.  
 
 ## Overview of Project
@@ -19,25 +19,40 @@ We then refactored the code to run more efficiently.
 
 ### Comparing original analysis run times vs refactored
 The original code ran in approximately .4 seconds for each year.
+
 ![Pic 1](https://github.com/charlagarcia/stock-analysis/blob/main/VBA_Challenge_2017.png)
 ![Pic 2](https://github.com/charlagarcia/stock-analysis/blob/main/VBA_Challenge_2018.png)
 
-After refactoring, run times were significantly reduced.
 
-## Results
+After refactoring the code, run times were significantly reduced to .09 seconds for 2017, and .05 seconds for 2018.
 
-### What are two conclusions you can draw about the Outcomes based on Launch Date?
-   - Launching in the Spring is ideal.
-   - There is minimal risk of cancelation throughout the year. However, December is the least successful month.
+![Pic_3](https://github.com/charlagarcia/stock-analysis/blob/main/2017_Refactored.png)
+![Pic_4](https://github.com/charlagarcia/stock-analysis/blob/main/2018_Refactored.png)
 
-### What can you conclude about the Outcomes based on Goals?
-  The most successful ranges are $0 - $20,000 and $35,000 - $45,000.
+### How was the code refactored for optimization?
+The original code contained a nested for loop.
 
-### What are some limitations of this dataset?
-  Information on canceled plays is not available for October.
+![Pic 5](https://github.com/charlagarcia/stock-analysis/blob/main/VBA_Original_Code.png)
 
-### What are some other possible tables and/or graphs that we could create?
-  - Outcomes based on country.
-  - Outcomes based on average donation.
+We made it more efficient by removing the nested loop, and removing the output to a separate loop.
+
+![Pic_6](https://github.com/charlagarcia/stock-analysis/blob/main/VBA_Refactored_Code.png)
+   
+# Summary
+
+## What are the advantages and disadvantages of refactoring code in general?
+### Advantages
+After refactoring, code is easier to understand and easier to maintain.
+
+### Disadvantages
+It can be time-consuming, and you might undo something that you have trouble fixing.
+
+## What are the advantages and disadvantages of refactoring this particular VBA script?
+### Advantages
+Taking out our nested loop decreased run time significantly.
+
+### Disadvantages
+In order to refactor the code, testing has to be done with each change to make sure the code still works, as well as adding script to both the original and new code to find the run time of each in order to compare.
+
 
 
